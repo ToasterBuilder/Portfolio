@@ -10,6 +10,8 @@ body, html {
   --color-black: #16161b;
   color: #AFFFFF;
 
+  font-family: 'Orbitron';
+  letter-spacing: 0.05em;
   box-sizing: border-box;
 }
 
@@ -138,4 +140,17 @@ h1, h2{
     calc(85% - 2px) 2px,
     calc(100% - 5px) calc(100% - 2px),
     2px calc(100% - 2px));
+}
+
+/* Profile section */
+.profile {
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+}
+
+.profile li {
+  margin: 0.5em 0;
+
+  font-size: 1.5em;
 }
