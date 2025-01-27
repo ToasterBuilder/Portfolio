@@ -8,7 +8,9 @@ body, html {
   /* COLOR PALETTE */
   --color-cyan: #AFFFFF; /* rgb (161, 255, 255) */
   --color-black: #16161b;
+  --color-hover: #48A6A7;
   color: #AFFFFF;
+
 
   font-family: 'Orbitron';
   letter-spacing: 0.05em;
@@ -81,6 +83,11 @@ h1, h2{
   clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
 }
 
+.button:hover span {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
 .button-start {
   flex: 1;
   display: inline-grid;
@@ -94,6 +101,11 @@ h1, h2{
   font-size: 1.2em;
 
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
+.button-start:hover span {
+  transform: scale(1.1);
+  color: var(--color-hover);
 }
 
 /* Button shaping with fake border */
@@ -161,7 +173,38 @@ h1, h2{
 }
 
 /* Skill section */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+
+  align-items: center;
+}
+
+.skills-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  height: 4.5em;
+  width: 4.5em;
+
+  font-size: 1.5em;
+}
+
+.skills-section i::before {
+  font-size: 3em;
+}
+
+.skills-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
 
 /* Project section */
 
+
 /* Contact section */
+
