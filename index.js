@@ -1,0 +1,18 @@
+const skills = {
+  'devicon-csharp-plain': 'C#',
+  'devicon-python-plain': 'Python',
+  'devicon-azuresqldatabase-plain': 'SQL',
+  'devicon-git-plain': 'Git',
+  'devicon-bash-plain': 'Bash',
+  'devicon-html5-plain': 'HTML',
+  'devicon-css3-plain': 'CSS',
+  'devicon-javascript-plain': 'Javascript',
+  'devicon-express-original': 'Express',
+  'devicon-react-original': 'React',
+  'devicon-mongodb-plain': 'MongoDB',
+  'devicon-dotnetcore-plain': 'Dotnet',
+  'devicon-kotlin-plain': 'Kotlin',
+  'devicon-linux-plain': 'Linux',
+  'devicon-javascript-plain': 'Java',
+  'devicon-docker-plain': 'Docker',
+}

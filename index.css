@@ -39,7 +39,6 @@ body, html {
   display: flex;
   width: auto;
   align-items: center;
-
 }
 
 .content-box {
@@ -47,7 +46,7 @@ body, html {
   padding: 1em;
 
   background-color: var(--color-black); /* Same color as background to hide dots */
-  border: 2px solid rgba(161, 255, 255, 0.7); /* Border for the content area */
+  border: 2px solid rgba(161, 255, 255, 0.8); /* Border for the content area */
   box-shadow: 0 0 10px rgba(161, 255, 255, 0.3); /* Glow effect */
 
   overflow: auto; /* Scroll if content exceeds height */
@@ -68,7 +67,7 @@ h1, h2{
 .button {
   flex: 1;
   display: inline-grid;
-  padding: 0.8em;
+  padding: 0.4em;
 
   position: relative;
   isolation: isolate;
@@ -77,18 +76,22 @@ h1, h2{
 
   margin-left: -2.7vw;
 
+  font-size: 1.2em;
+
   clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
 }
 
 .button-start {
   flex: 1;
   display: inline-grid;
-  padding: 0.8em;
+  padding: 0.4em;
   
   position: relative;
   isolation: isolate;
 
   border: 0;
+
+  font-size: 1.2em;
 
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 }
@@ -146,7 +149,9 @@ h1, h2{
 .profile {
   list-style-type: none;
   padding: 0;
-  margin: 0
+  margin: 0;
+
+  display: none; /* temp */
 }
 
 .profile li {
@@ -154,3 +159,9 @@ h1, h2{
 
   font-size: 1.5em;
 }
+
+/* Skill section */
+
+/* Project section */
+
+/* Contact section */
