@@ -19,7 +19,7 @@ export const skills = {
 
 export const projects = [{
   name: 'Book Reading App',
-  img: '',
+  img: 'BookReadingApp.png',
   skills: ['devicon-kotlin-plain', 'devicon-sqldeveloper-plain', 'devicon-html5-plain',
     'devicon-git-plain'
   ]
@@ -32,7 +32,7 @@ export const projects = [{
 },
 {
   name: 'Teacher/Student Scheduler',
-  img: '',
+  img: 'OfficeHourScheduler.jpg',
   skills: ['devicon-python-plain', 'devicon-sqldeveloper-plain', 'devicon-html5-plain',
     'devicon-css3-plain', 'devicon-git-plain'
   ]

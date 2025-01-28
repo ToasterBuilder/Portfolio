@@ -12,6 +12,7 @@ for(let i = 0; i < skillsKeys.length; ++i){
 }
 
 const projectsSection = document.getElementById("project-section");
+const projectDisplayBox = document.querySelector('.project-display');
 
 for(let i = 0; i < projects.length; ++i){
   const icon = document.createElement('i');
@@ -22,8 +23,17 @@ for(let i = 0; i < projects.length; ++i){
 
   icon.appendChild(text);
   projectsSection.appendChild(icon);
-  // const img = document.createElement('img');
-  // img.src = projects[i].img;
+
+  icon.addEventListener('click', () => {
+    // Clear
+    projectDisplayBox.textContent = '';
+
+    const img = document.createElement('img');
+    img.src = `./res/projectImg/${projects[i].img}`;
+    img.alt = `Project ${projects[i].name} image`;
+
+    projectDisplayBox.appendChild(img);
+  });
 }
 
 document.querySelectorAll('.selector .button-start, .selector .button').forEach((button) => {
@@ -38,5 +48,16 @@ document.querySelectorAll('.selector .button-start, .selector .button').forEach(
 
     // Show the selected section
     document.getElementById(sectionId).style.display = 'flex';
+
+    // Get the display to display from data-display
+    const displayId = button.getAttribute('data-display');
+    
+    // Hide other sections
+    document.querySelectorAll('.display-box > div').forEach((display) => {
+      display.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.getElementById(displayId).style.display = 'flex';
   })
 });

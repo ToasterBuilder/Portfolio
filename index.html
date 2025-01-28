@@ -18,21 +18,31 @@
 <body>
   <div class="container">
     <div class="left-side">
+
       <div class="selector">
-        <button class="button-start" data-section="profile-section"><span>Profile</span></button>
-        <button class="button" data-section="skills-section"><span>Skills</span></button>
-        <button class="button" data-section="project-section"><span>Projects</span></button>
-        <button class="button" data-section="contact-section"><span>Contact</span></button>
+        <button class="button-start" data-section="profile-section" data-display="profile-display">
+          <span>Profile</span>
+        </button>
+        <button class="button" data-section="skills-section" data-display="skills-display">
+          <span>Skills</span>
+        </button>
+        <button class="button" data-section="project-section" data-display="project-display">
+          <span>Projects</span>
+        </button>
+        <button class="button" data-section="contact-section" data-display="contact-display">
+          <span>Contact</span>
+        </button>
       </div>
+
       <div class="content-box">
         <div id="profile-section" class="profile-section">
           <ul class="profile">
-            <li><strong>Name:</strong> Kevin Wu</li>
+            <li><strong>Name:</strong> Kevin Wu 凯</li>
             <li><strong>Title:</strong> Junior Developer</li>
             <li><strong>Education:</strong> Dawson college --- 3rd year computer science</li>
             <li><strong>Location:</strong> Montreal / Canada</li>
             <li><strong>About me:</strong> Hi, my name is kevin but you can call me kai 
-              (insert chinese character here). I'm a junior software developer with a passion for cybersecurity.</li>
+              (凯). I'm a junior software developer with a passion for cybersecurity.</li>
           </ul>
         </div>
         <div id="skills-section" class="skills-section">
@@ -48,8 +58,20 @@
         </div>
       </div>
     </div>
+
     <div class="display-box">
-      <img src="./res/me.png" alt="Picture of me"/>
+      <div id="profile-display" class="profile-display">
+        <img src="./res/me.png" alt="Picture of me" />
+      </div>
+      <div id="skills-display" class="skills-display">
+        <img src="./res/me.png" alt="Picture of me" />
+      </div>
+      <div id="project-display" class="project-display">
+        <p>/// No project opened ///</p>
+      </div>
+      <div id="contact-display" class="contact-display">
+        <p>Don't hesitate to contact me!</p>
+      </div>
     </div>
   </div>
 </body>
