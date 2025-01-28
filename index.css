@@ -180,6 +180,8 @@ h1, h2{
   padding: 16px;
 
   align-items: center;
+
+  display: none; /* temp */
 }
 
 .skills-section i {
@@ -207,4 +209,36 @@ h1, h2{
 
 
 /* Contact section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
 
+  align-items: center;
+}
+
+.contact-section a {
+  text-decoration: none;
+}
+
+.contact-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  height: 4.5em;
+  width: 4.5em;
+
+  font-size: 1.5em;
+}
+
+.contact-section i::before {
+  font-size: 3em;
+}
+
+.contact-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
