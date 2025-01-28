@@ -162,6 +162,10 @@ h1, h2{
   margin: 0;
 }
 
+.profile strong {
+  color: #587d7d
+}
+
 .profile li {
   margin: 0.5em 0;
 
@@ -209,7 +213,41 @@ h1, h2{
 
 /* Project section */
 .project-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  padding: 2.5em;
+
+  align-items: center;
+
   display: none;
+}
+
+.project-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+
+  height: 6em;
+  width: 6em;
+
+  font-size: 0.8em;
+}
+
+.project-section i::before {
+  font-size: 5em;
+}
+
+.project-section i span {
+  font-size: 0.65em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
 }
 
 /* Contact section */
