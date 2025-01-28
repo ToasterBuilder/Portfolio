@@ -58,8 +58,6 @@ body, html {
   flex: 1;
   height: calc(100% - 1em);
   padding: 0.8em;
-
-  background-color: red;
 }
 
 h1, h2{
@@ -162,14 +160,18 @@ h1, h2{
   list-style-type: none;
   padding: 0;
   margin: 0;
-
-  display: none; /* temp */
 }
 
 .profile li {
   margin: 0.5em 0;
 
   font-size: 1.5em;
+}
+
+.display-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Skill section */
@@ -181,7 +183,7 @@ h1, h2{
 
   align-items: center;
 
-  display: none; /* temp */
+  display: none;
 }
 
 .skills-section i {
@@ -206,7 +208,9 @@ h1, h2{
 }
 
 /* Project section */
-
+.project-section {
+  display: none;
+}
 
 /* Contact section */
 .contact-section {
@@ -216,6 +220,8 @@ h1, h2{
   padding: 16px;
 
   align-items: center;
+
+  display: none;
 }
 
 .contact-section a {
