@@ -1,0 +1,333 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+* {
+  /* COLOR PALETTE */
+  --color-cyan: #AFFFFF; /* rgb (161, 255, 255) */
+  --color-black: #16161b;
+  --color-hover: #48A6A7;
+  color: #AFFFFF;
+
+
+  font-family: 'Orbitron';
+  letter-spacing: 0.05em;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  background-color: var(--color-black); /* Dark gray-black background */
+  background-image: radial-gradient(circle, rgba(161, 255, 255, 0.2) 0.5px, transparent 1px);
+  background-size: 20px 20px; /* Space between dots */
+
+  display: flex;
+  gap: 0.7em;
+  padding: 3em 1em;
+  box-sizing: border-box;
+}
+
+.left-side {
+  flex: 2; 
+  display: flex;
+  height: calc(100% - 1em);
+  flex-direction: column;
+}
+
+.selector {
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+.content-box {
+  flex: 1;
+  padding: 1em;
+
+  background-color: var(--color-black); /* Same color as background to hide dots */
+  border: 2px solid rgba(161, 255, 255, 0.8); /* Border for the content area */
+  box-shadow: 0 0 10px rgba(161, 255, 255, 0.3); /* Glow effect */
+
+  overflow: auto; /* Scroll if content exceeds height */
+}
+
+.display-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 1em);
+  padding: 0.8em;
+}
+
+h1, h2{
+  margin: 0;
+}
+
+.button {
+  flex: 1;
+  display: inline-grid;
+  padding: 0.4em;
+
+  position: relative;
+  isolation: isolate;
+
+  border: 0;
+
+  margin-left: -2.7vw;
+
+  font-size: 1.2em;
+
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+}
+
+.button:hover span {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
+.button-start {
+  flex: 1;
+  display: inline-grid;
+  padding: 0.4em;
+  
+  position: relative;
+  isolation: isolate;
+
+  border: 0;
+
+  font-size: 1.2em;
+
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
+.button-start:hover span {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
+/* Button shaping with fake border */
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.button::before {
+  background: rgba(161, 255, 255, 0.7);
+  z-index: -2;
+}
+
+.button::after {
+  background: #16161b;
+  z-index: -1;
+
+  clip-path: polygon(
+    0 2px,
+    calc(85% - 2px) 2px,
+    calc(100% - 5px) calc(100% - 2px),
+    0 calc(100% - 2px)
+  );
+}
+
+/* Button-start shaping with fake border */
+.button-start::before,
+.button-start::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.button-start::before {
+  background: rgba(161, 255, 255, 0.7);
+  z-index: -2;
+}
+
+.button-start::after {
+  background: #16161b;
+  z-index: -1;
+
+  clip-path: polygon(
+    2px 2px,
+    calc(85% - 2px) 2px,
+    calc(100% - 5px) calc(100% - 2px),
+    2px calc(100% - 2px));
+}
+
+/* Profile section */
+.profile {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile strong {
+  color: #587d7d
+}
+
+.profile li {
+  margin: 0.5em 0;
+
+  font-size: 1.5em;
+}
+
+.display-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile display */
+.profile-display {
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  
+  display: flex;
+}
+
+/* Skill section */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+
+  align-items: center;
+
+  display: none;
+}
+
+.skills-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  height: 4.5em;
+  width: 4.5em;
+
+  font-size: 1.5em;
+}
+
+.skills-section i::before {
+  font-size: 3em;
+}
+
+.skills-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
+/* Skills display */
+.skills-display {
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/* Project section */
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  padding: 2.5em;
+
+  align-items: center;
+
+  display: none;
+}
+
+.project-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+
+  height: 6em;
+  width: 6em;
+
+  font-size: 0.8em;
+}
+
+.project-section i::before {
+  font-size: 5em;
+}
+
+.project-section i span {
+  font-size: 0.65em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
+/* Project display */
+.project-display {
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  
+  display: none;
+}
+
+.project-display img {
+  object-fit: contain;
+}
+
+/* Contact section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+
+  align-items: center;
+
+  display: none;
+}
+
+.contact-section a {
+  text-decoration: none;
+}
+
+.contact-section i {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  height: 4.5em;
+  width: 4.5em;
+
+  font-size: 1.5em;
+}
+
+.contact-section i::before {
+  font-size: 3em;
+}
+
+.contact-section i:hover {
+  transform: scale(1.1);
+  color: var(--color-hover);
+}
+
+/* Contact display */
+.contact-display {
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  
+  display: none;
+}
